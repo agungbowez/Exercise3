@@ -12,57 +12,64 @@
 
     <title>Planet List</title>
 	<style>
-	   h1{
-              text-align:center;
-	      font-weigth:bold;
-	      font-size:50px;
-	     }
+	    h1{
+            text-align:center;
+	        font-weigth:bold;
+	        font-size:50px;
+        }
+         
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){
+            background-color: #f2f2f2
+        }
 	</style>
 
     </head>
 
 <body>
     <h1>Planet List</h1>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari Planet Kamu disini.." title="Type in a name"><br><br>
+    <input type="text" id="myInput" onkeyup="filteringTable()" placeholder="Cari Planet Kamu disini.." title="Type in a name"><br>
+
+    <p><button onclick="sortTable()">Sort</button></p> <br>
 
     <table id="tablePlanets" cellpadding="10" cellspacing="1" border="1">
 
         <tbody>
 
-        <thead>
+            <thead>
 
-            <th>Nama</th>
+                <th>Nama</th>
+                <th>Rotation Period</th>
+                <th>Orbital Period</th>
+                <th>Diameter</th>
+                <th>Climate</th>
+                <th>Gravity</th>
+                <th>Terrain</th>
+                <th>Surface Water</th>
+                <th>Population</th>
+                <th>Residents</th>
+                <th>Films</th>
+                <th>Created</th>
+                <th>Edited</th>
+                <th>Url</th>
+            </thead>
 
-            <th>Rotation Period</th>
-
-            <th>Orbital Period</th>
-
-            <th>Diameter</th>
-
-            <th>Climate</th>
-
-            <th>Gravity</th>
-
-            <th>Terrain</th>
-
-            <th>Surface Water</th>
-
-            <th>Population</th>
-
-	    <th>Residents</th>
-	    <th>Films</th>
- 	    <th>Created</th>
-	    <th>Edited</th>
-	    <th>Url</th>
-        </thead>
-
-    </tbody>
+        </tbody>
 
     </table>
 
 
-    <script src="swapi.js"></script>
+<script src="swapi.js"></script>
 
 </body>
-
 </html>
